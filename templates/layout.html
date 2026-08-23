@@ -1,0 +1,26 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{if .Snippet}}{{.Snippet.Title}} - {{end}}SnipBin</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="/">⚡ SnipBin</a></h1>
+            {{if .Snippet}}
+                <a href="/" class="btn">+ New Snippet</a>
+            {{end}}
+        </header>
+
+        <main>
+            {{template "content" .}}
+        </main>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
+{{end}}

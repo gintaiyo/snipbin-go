@@ -1,0 +1,15 @@
+{{define "content"}}
+<div class="card">
+    <div class="meta-bar">
+        <div>
+            <h2>{{.Snippet.Title}}</h2>
+            <small class="meta-info">Type: {{.Snippet.Language}} | Expires in: {{.Remaining}}</small>
+        </div>
+        <div class="actions">
+            <button class="btn btn-secondary" id="copy-btn">Copy Text</button>
+            <a href="/raw/{{.Snippet.ID}}" target="_blank" class="btn btn-secondary">Raw</a>
+        </div>
+    </div>
+    <pre><code id="snippet-code">{{.Snippet.Content}}</code></pre>
+</div>
+{{end}}
