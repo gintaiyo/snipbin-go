@@ -7,3 +7,5 @@ to run download Go compiler
 git clone
 then 
 go run main.go
+
+for any problems dont dm me 
